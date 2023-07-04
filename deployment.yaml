@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-kube-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: argocd-kube
+  template:
+    metadata:
+      labels:
+        run: argocd-kube
+    spec:
+      containers:
+      - image: your docker image
+        name: argocd-kube
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: ap-northeast-2-ecr-registry
