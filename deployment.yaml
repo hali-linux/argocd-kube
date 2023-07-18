@@ -13,7 +13,7 @@ spec:
         run: argocd-kube
     spec:
       containers:
-      - image: 028262978893.dkr.ecr.ap-northeast-2.amazonaws.com/docker-repo:2da0e4c
+      - image: 028262978893.dkr.ecr.ap-northeast-2.amazonaws.com/docker-repo:e1bec54
         name: argocd-kube
         ports:
         - containerPort: 80
